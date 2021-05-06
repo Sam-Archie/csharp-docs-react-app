@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { postLogin } from '../../features/login/api';
+import { IUserData } from '../../features/login/types';
 import { useAppDispatch } from '../../hooks'
 
 const LoginForm: React.FC = () => {
@@ -18,13 +19,11 @@ const LoginForm: React.FC = () => {
   const submitUserDetails = (e: React.SyntheticEvent) => {
     e.preventDefault()
 
-    const userData: any = {
+    const userData: IUserData = {
       email,
       password,
     }
-
     dispatch(postLogin(userData));
-    console.log(userData)
   }
 
   return (

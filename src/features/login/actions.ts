@@ -1,8 +1,9 @@
 import { LOGIN_SUBMIT } from "./actionTypes"
+import { ILoginDataResponse } from "./types"
 
-export const setLoginDetails = (userData: any) => {
+export const setLoginResponseData = (loginResponseData: ILoginDataResponse) => {
     return {
         type: LOGIN_SUBMIT,
-        payload: userData,
+        payload: loginResponseData,
     }
 }
