@@ -8,7 +8,7 @@ export const postLogin = (userData: IUserData) => {
             email: userData.email,
             password: userData.password
         }).then(({ data }) => {
-            localStorage.setItem("token", data.userData.token)
+            console.log(data)
             dispatch(setLoginResponseData(data));
         })
     }
